@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic DOM Example</title>
+  <style>
+    .card {
+      display: inline-block;
+      color: white;
+      margin: 10px;
+      padding: 20px;
+    }
+    .male {
+      background-color: maroon;
+    }
+    .female {
+      background-color: magenta;
+    }
+    .name {
+      font-size: 24px;
+    }
+    .age {
+      color: chartreuse;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="parent"></div>
+
+  <script>
+    // Get parent element
+    parentobj = document.getElementById("parent");
+
+    // Array of student objects
+    student = [
+      { name: "Madhavi", gender: "F", age: 20 },
+      { name: "Pratik", gender: "M", age: 19 },
+      { name: "Mariya", gender: "F", age: 18 },
+      { name: "Sathyavani", gender: "F", age: 22 },
+      { name: "Amvika", gender: "F", age: 21 }
+    ];
+
+    // Loop through each student and create cards dynamically
+    for (i = 0; i < student.length; i++) {
+      let className = 'female';
+      if (student[i].gender == 'M') {
+        className = 'male';
+      }
+
+      // Create a div for each student
+      divTag = document.createElement("div");
+      divTag.className = "card " + className;
+
+      // Create name paragraph
+      nameTag = document.createElement("p");
+      nameTag.className = "name";
+      nameTag.innerText = student[i].name;
+
+      // Create age paragraph
+      ageTag = document.createElement("p");
+      ageTag.className = "age";
+      ageTag.innerText = student[i].age;
+
+      // Append name and age to the card
+      divTag.appendChild(nameTag);
+      divTag.appendChild(ageTag);
+
+      // Append the card to the parent div
+      parentobj.appendChild(divTag);
+    }
+  </script>
+
+</body>
+</html>

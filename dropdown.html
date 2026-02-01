@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <style>       
+       .parent{                   
+            display: inline-block;
+       }
+       .child{           
+            border-radius: 12px;
+            background-color: bisque;
+            display: none;
+            position: absolute;
+       }
+       .parent:hover .child{
+            display: block;
+       }
+       a{
+            text-decoration: none;
+            color: inherit;
+       }
+       .item{
+            padding:5px;           
+       }
+       .item:hover{
+        background-color: greenyellow;
+        color:red;
+       }
+    </style>
+</head>
+<body>    
+    <div class="parent">
+        <button>Menu</button>
+        <div class="child">
+           <div class="item">
+                <a href="https://www.google.com">Home</a>
+           </div>
+
+           <div class="item">
+                <a href="https://www.instagram.com">Gallery</a>
+           </div>
+
+           <div class="item">
+                <a href="https://www.linkedin.com">Services</a>
+           </div>
+
+           <div class="item">
+                <a href="https://www.naukri.com">Careers</a>
+           </div>
+        </div>
+    </div>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga sapiente possimus dolores fugiat ad nobis suscipit et corrupti. Sapiente quo eum corrupti. Ullam tenetur, quos fuga quasi doloribus consequuntur cupiditate!
+    </p>
+
+</body>
+</html>

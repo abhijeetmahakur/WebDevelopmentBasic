@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS media query</title>
+    <style>
+        body{
+            background-color:red;
+        }
+        @media screen and(orientatioin:landscape){
+        body{
+            background-color: purple;
+        }}
+        @media only screen and  (max_width:455px){
+            body{
+            background-color: blue;
+
+        }
+    }
+    .box{
+        width: 344px;
+        height:344px;
+        background-color: slateblue;
+        padding:3px
+        margin:3px
+    }
+        
+    </style>
+</head>
+<body>
+    <div>
+        
+        Hey Iama red  color
+    </div>
+    <div class=""box></div>
+    <div class=""box></div>
+    <div class=""box></div>
+</body>
+</html>

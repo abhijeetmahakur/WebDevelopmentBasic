@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    
+    <input type="text" id="uname" placeholder="Username">
+    <input type="password" id="upass" placeholder="Password">
+    <button onclick="validate()">Login</button>
+    <h3 id="output"></h3>
+
+    <script>
+        unameObj=document.getElementById("uname")
+        upassObj=document.getElementById("upass")
+
+        outputObj=document.getElementById("output")
+
+        function validate(){
+
+            //Validation Logics
+            //Username and password should not be Empty
+            //Password shpuld be atleast 6 chars
+
+            if(unameObj.value=="" || upassObj.value==""){
+                outputObj.textContent="Missing Inputs"
+                outputObj.style.color='red'
+                return
+            }
+
+            if(upassObj.value.length<6){
+                outputObj.textContent="Password should have minimum 6 chars"
+                outputObj.style.color='red'
+                return
+            }
+
+            if(unameObj.value=="acme" && upassObj.value=="intern"){
+            outputObj.textContent="Login Success"
+            outputObj.style.color='green'
+            location.href='https://www.instagram.com'
+            }
+            else{
+                outputObj.textContent="Login Failed"
+                outputObj.style.color='red'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    
+    <input type="number" id="ageip">
+    <button onclick="check()">Check Eligibility</button>
+    <h1 id="output">-</h1>
+
+
+    <script>
+        ageObj=document.getElementById("ageip")
+        //TASK: Instead of using alert to display result, display the result in the h1
+        h1Obj=document.getElementById("output")
+        function check(){
+            if(ageObj.value>=18){
+                //alert("Major")
+                h1Obj.textContent='Major'
+            }
+            else{
+                //alert("Minor")
+                h1Obj.textContent='Minor'
+            }
+        }
+    </script>
+
+</body>
+</html>

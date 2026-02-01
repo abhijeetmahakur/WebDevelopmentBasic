@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+<h1 id="rep">Republic Day</h1>
+<h1 id="ind" style="border:2px solid black">Independence Day</h1>
+
+<button onclick="changeColor('brown','white')">Saffron</button>
+<button onclick="changeColor('white','brown')">White</button>
+<button onclick="changeColor('green','white')">Green</button>
+
+<!-- TASK: Add two more buttons to change the color to green and white -->
+
+<script>
+    // h1Obj = document.querySelector("#title")
+    h1Obj = document.getElementById("ind")
+    console.log(h1Obj)
+
+    function changeColor(bgclr, fgclr){
+        h1Obj.style.backgroundColor = bgclr
+        h1Obj.style.color = fgclr
+    }
+</script>
+
+</body>
+</html>
